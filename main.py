@@ -12,9 +12,9 @@ def run():
     import time
     import cv2
 
-    from util.logger import get_logger
-    from FrameProcessor import FrameProcessor
-    from util.debugger import mouse_callback, take_screenshot
+    from .util.logger import get_logger
+    from .FrameProcessor import FrameProcessor
+    from .util.debugger import mouse_callback, take_screenshot
     from keras import backend as K
     logger = get_logger()
 

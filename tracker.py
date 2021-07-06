@@ -3,7 +3,7 @@ Functions for keeping track of detected peoples in a video.
 '''
 
 import cv2
-from util.logger import get_logger
+from .util.logger import get_logger
 
 
 logger = get_logger()

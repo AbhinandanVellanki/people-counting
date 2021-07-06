@@ -1,8 +1,8 @@
 from .bounding_box import get_centroid, get_area
 from shapely.geometry import Point
-from tracker import get_tracker
-from util.bounding_box import get_overlap
-from util.logger import get_logger
+from ..tracker import get_tracker
+from ..util.bounding_box import get_overlap
+from ..util.logger import get_logger
 import uuid
 logger = get_logger()
 
