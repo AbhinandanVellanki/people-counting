@@ -4,11 +4,11 @@ import numpy as np
 from keras.models import Model
 from keras.models import load_model
 from keras.layers import Input
-from yolov3.decoder_layer import make_decoder_layer
-from yolov3.yolo_util import compose
-from util.bounding_box import get_centroid
+from .decoder_layer import make_decoder_layer
+from .yolo_util import compose
+from ..util.bounding_box import get_centroid
 from shapely.geometry import Point
-from util.logger import get_logger
+from ..util.logger import get_logger
 logger = get_logger()
 
 
