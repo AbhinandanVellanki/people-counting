@@ -339,7 +339,7 @@ if __name__ == '__main__':
     #Or change
     load_dotenv(dotenv_path="./env.env")
 
-    from util.logger import init_logger
+    from .util.logger import init_logger
     init_logger()
     #run_test()
     run()
