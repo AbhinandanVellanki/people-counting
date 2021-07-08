@@ -1,14 +1,14 @@
 import cv2
-from .util.objects import add_new_objects
+from util.objects import add_new_objects
 from collections import OrderedDict
 import time
-from .util.detection_roi import get_roi_frame, draw_roi
-from .util.logger import get_logger
-from .counter import get_counting_line, is_passed_counting_line, is_passed_counting_roi
-from .yolov3.yolo_detection_model import YoloDetector
+from util.detection_roi import get_roi_frame, draw_roi
+from util.logger import get_logger
+from counter import get_counting_line, is_passed_counting_line, is_passed_counting_roi
+from yolov3.yolo_detection_model import YoloDetector
 from shapely.geometry.polygon import Polygon
 from shapely.geometry import Point
-from .util.bounding_box import get_centroid
+from util.bounding_box import get_centroid
 import requests
 logger = get_logger()
 

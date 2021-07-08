@@ -12,9 +12,9 @@ def run():
     import time
     import cv2
 
-    from .util.logger import get_logger
-    from .FrameProcessor import FrameProcessor
-    from .util.debugger import mouse_callback, take_screenshot
+    from util.logger import get_logger
+    from FrameProcessor import FrameProcessor
+    from util.debugger import mouse_callback, take_screenshot
     from keras import backend as K
     logger = get_logger()
 
@@ -149,7 +149,7 @@ def run():
 
     logger.info('Processing started.', extra={
         'meta': {
-            'person': 'COUNT_PROCESS',
+            'cat': 'COUNT_PROCESS',
             'counter_config': {
                 'di': detection_interval,
                 'mcdf': mcdf,
@@ -198,13 +198,13 @@ def run():
             output_frame = people_counter.visualize()
 
         if record:
-            output_video.write(output_frame)
+             output_video.write(output_frame)
 
         # if we run it with UI display
         if UI:
-            debug_window_size = ast.literal_eval(os.getenv('DEBUG_WINDOW_SIZE'))
-            resized_frame = cv2.resize(output_frame, debug_window_size)
-            cv2.imshow('Debug', resized_frame)
+             debug_window_size = ast.literal_eval(os.getenv('DEBUG_WINDOW_SIZE'))
+             resized_frame = cv2.resize(output_frame, debug_window_size)
+             cv2.imshow('Debug', resized_frame)
 
         ret, frame = cap.read()
 
@@ -339,7 +339,7 @@ if __name__ == '__main__':
     #Or change
     load_dotenv(dotenv_path="./env.env")
 
-    from .util.logger import init_logger
+    from util.logger import init_logger
     init_logger()
     #run_test()
     run()
